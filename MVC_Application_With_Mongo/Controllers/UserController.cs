@@ -14,6 +14,8 @@ namespace MVC_Application_With_Mongo.Controllers
 {
     public class UserController : Controller
     {
+        
+        
         // GET: User
         //public ActionResult Index()
         //{
@@ -45,6 +47,22 @@ namespace MVC_Application_With_Mongo.Controllers
             //Insert into Users table.
             UserDetails.Insert<UserModel>(um);
             return View();
+
+            //var document = objDatabse.GetCollection<BsonDocument>("Users");
+            //var query = Query.And(Query.EQ("model.UserName", model.UserName), Query.EQ("Color", UserModel.Color));
+
+            //var count = document.FindAs<UserModel>(query).Count();
+
+            //if (count == 0)
+            //{
+            //    var result = UserDetails.Insert<UserModel>(um);
+            //}
+            //else
+            //{
+            //    TempData["Message"] = "Username Already Exist";
+            //    return View();
+            //}
+
         }
         //[HttpGet]
         //public ActionResult GetUsers()
@@ -55,7 +73,7 @@ namespace MVC_Application_With_Mongo.Controllers
         //    MongoDatabase objDatabse = objServer.GetDatabase("MVCTestDB");
         //    var UserDetails = objDatabse.GetCollection("Users").FindAll().ToList();
         //    return View(UserDetails);
-        }
+        //}
         //[HttpDelete]
         //public ActionResult Delete(int id)
         //{

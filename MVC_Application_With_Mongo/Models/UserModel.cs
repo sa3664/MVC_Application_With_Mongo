@@ -9,7 +9,7 @@ namespace MVC_Application_With_Mongo.Models
 {
     public class UserModel
         {
-            public object _id { get; set; } //MongoDb uses this field as identity.
+            //public object _id { get; set; } //MongoDb uses this field as identity.
 
             public int ID { get; set; }
 
